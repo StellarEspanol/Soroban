@@ -69,6 +69,10 @@ match rol {
 
 
 
+### Código en Soroban
+
+
+
 Nos vamos a una ruta donde queramos crear nuestro proyecto y ponemos el siguiente comando:
 
 ```
@@ -108,6 +112,5 @@ impl MyContract {
 }
 ```
 
+HOLA provando
 
-
-Borramos el contrato generado en  lib.rs y ponemos el siguiente código
