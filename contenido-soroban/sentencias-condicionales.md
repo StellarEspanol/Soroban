@@ -170,3 +170,24 @@ check_role("User")    // Devuelve "Acceso limitado"
 check_role("Otro")    // Devuelve "Rol no reconocido"
 ```
 
+**Compilación del contrato**
+
+Ejecutamos lo siguiente:
+
+```
+Stellar contract build
+```
+
+**Despliegue del contrato**
+
+Para Mac y Linux el salto de línea es con el carácter " **\\**" y en Windows con el carácter " **´** "
+
+Reemplaze el simbolo \* por el respectivo carácter de salto de linea a su sistema operativo.
+
+```
+stellar contract deploy *
+  --wasm target/wasm32-unknown-unknown/release/ConditionalStatements.wasm *
+  --source developer *
+  --network testnet *
+  --alias primitivedata
+```
