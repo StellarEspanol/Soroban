@@ -83,14 +83,12 @@ Borramos el contrato generado en  lib.rs y ponemos el siguiente código
 
 ```rust
 #![no_std]
-
-use soroban_sdk::{contract, contractimpl, Env, Symbol};
-
+use soroban_sdk::{contract, contractimpl, symbol_short, Env, Symbol};
 #[contract]
-pub struct MyContract;
+pub struct ConditionalSt;
 
 #[contractimpl]
-impl MyContract {
+impl ConditionalSt {
     // Función que usa if-else para determinar si un número es positivo o negativo.
     pub fn check_number(env: Env, num: i32) -> Symbol {
         if num >= 0 {
@@ -99,18 +97,76 @@ impl MyContract {
             Symbol::new(&env, "Numero negativo")
         }
     }
-
     // Función que usa match para asignar permisos según el rol del usuario.
     pub fn check_role(env: Env, role: Symbol) -> Symbol {
-        match role.to_string().as_str() {
-            "Admin" => Symbol::new(&env, "Acceso total"),
-            "User"  => Symbol::new(&env, "Acceso limitado"),
-            "Guest" => Symbol::new(&env, "Solo lectura"),
-            _       => Symbol::new(&env, "Rol no reconocido"),
+        let admin: Symbol = symbol_short!("Admin");
+        let user: Symbol = symbol_short!("User");
+        let guest: Symbol = symbol_short!("Guest");
+
+        match role {
+            admin => Symbol::new(&env, "Acceso total"),
+            user => Symbol::new(&env, "Acceso limitado"),
+            guest => Symbol::new(&env, "Solo lectura"),
+            _ => Symbol::new(&env, "Rol no reconocido"),
         }
     }
 }
 ```
 
-HOLA provando
+### 📌 **Explicación general del código**
+
+* Usa `#![no_std]`, lo que significa que **no usa la biblioteca estándar de Rust**.
+* Importa módulos de `soroban_sdk`, necesarios para escribir **contratos inteligentes en Soroban**.
+* Define una **estructura de contrato** llamada `ConditionalSt`.
+* Implementa dos funciones clave:
+  1. `check_number()`: Usa `if-else` para verificar si un número es **positivo o negativo**.
+  2. `check_role()`: Usa `match` para **asignar permisos** según el rol de un usuario.
+
+***
+
+### 🛠 **Explicación de las funciones**
+
+Todas las funciones reciben `env: Env`, que es obligatorio en Soroban.
+
+#### 1️⃣ **`check_number(env: Env, num: i32) -> Symbol`**
+
+✅ **Determina si un número es positivo o negativo.**
+
+📌 **Paso a paso:**
+
+1. Recibe un número entero con signo (`i32`).
+2. Usa una **estructura condicional `if-else`**:
+   * Si `num >= 0`, retorna `"Numero positivo"`.
+   * Si `num < 0`, retorna `"Numero negativo"`.
+3. Retorna el resultado como un **símbolo (`Symbol`)**.
+
+📌 **Ejemplo de uso:**
+
+```rust
+check_number(10)   // Devuelve "Numero positivo"
+check_number(-5)   // Devuelve "Numero negativo"
+```
+
+***
+
+#### 2️⃣ **`check_role(env: Env, role: Symbol) -> Symbol`**
+
+✅ **Asigna permisos según el rol del usuario.**
+
+📌 **Paso a paso:**
+
+1. Define **tres roles** como `Symbol`:
+   * `Admin` → `"Acceso total"`
+   * `User` → `"Acceso limitado"`
+   * `Guest` → `"Solo lectura"`
+2. Usa `match` para **verificar el rol** y asignar permisos.
+3. Si el rol no es reconocido, devuelve `"Rol no reconocido"`.
+
+📌 **Ejemplo de uso:**
+
+```rust
+check_role("Admin")   // Devuelve "Acceso total"
+check_role("User")    // Devuelve "Acceso limitado"
+check_role("Otro")    // Devuelve "Rol no reconocido"
+```
 
