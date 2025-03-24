@@ -3,14 +3,15 @@
 ## Soroban
 
 * [Instalación](README.md)
+  * [🦀 Rust](soroban/instalacion/rust.md)
   * [☄️ Cliente Stellar](soroban/instalacion/stellarcli.md)
   * [🚊 NVM](soroban/instalacion/nvm.md)
   * [🌐 Node Js](soroban/instalacion/node-js.md)
   * [✏️ Visual studio code](soroban/instalacion/visual-studio-code.md)
 
-## Instalación
+***
 
-* [🦀 Rust](instalacion/rust.md)
+* [Page](page.md)
 
 ## Cliente Stellar
 
