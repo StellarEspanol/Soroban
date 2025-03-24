@@ -1,17 +1,16 @@
 # Table of contents
 
-* [🏠 Inicio](README.md)
+## Soroban
+
+* [Instalación](README.md)
+  * [☄️ Cliente Stellar](soroban/instalacion/stellarcli.md)
+  * [🚊 NVM](soroban/instalacion/nvm.md)
+  * [🌐 Node Js](soroban/instalacion/node-js.md)
+  * [✏️ Visual studio code](soroban/instalacion/visual-studio-code.md)
 
 ## Instalación
 
 * [🦀 Rust](instalacion/rust.md)
-* [☄️ Cliente Stellar](instalacion/stellarcli.md)
-* [🚊 NVM](instalacion/nvm.md)
-* [🌐 Node Js](instalacion/node-js.md)
-
-***
-
-* [✏️ Visual studio code](visual-studio-code.md)
 
 ## Cliente Stellar
 
@@ -24,9 +23,9 @@
 ## Contenido Soroban
 
 * [Tipos de datos primitivos](contenido-soroban/tipos-de-datos-primitivos.md)
+* [Tipos de Datos Estructurados](contenido-soroban/tipos-de-datos-estructurados.md)
 * [String](contenido-soroban/string.md)
 * [Sentencias condicionales](contenido-soroban/sentencias-condicionales.md)
-* [Estructuras de datos](contenido-soroban/estructuras-de-datos.md)
 * [Loops](contenido-soroban/loops.md)
 * [Funciones](contenido-soroban/funciones.md)
 * [NFT](contenido-soroban/nft.md)

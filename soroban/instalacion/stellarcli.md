@@ -73,4 +73,4 @@ Una vez instalado en la terminal ejecutamos el comando stellar ( en la terminal)
 stellar
 ```
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
