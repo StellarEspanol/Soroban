@@ -10,7 +10,7 @@ Nos vamos a una ruta donde queramos crear nuestro proyecto y ponemos el siguient
 stellar contract init get_set_helloworld --name get_set_message
 ```
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Borramos el contrato generado por defecto y lo sustituimos por el siguiente código</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Borramos el contrato generado por defecto y lo sustituimos por el siguiente código</p></figcaption></figure>
 
 ```rust
 #![no_std]
@@ -108,7 +108,7 @@ stellar contract deploy *
   --alias get_set_message
 ```
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 **Pruebas del contratro**
 
@@ -128,7 +128,7 @@ stellar contract invoke `
   --message "Hey master developer 😉"
 ```
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 **Invocación de la función get\_message**
 
@@ -141,4 +141,4 @@ stellar contract invoke `
   get_message 
 ```
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>

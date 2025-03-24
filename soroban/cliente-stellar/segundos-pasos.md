@@ -15,11 +15,11 @@ Syntaxis:\
 
 `stellar contract init hola_mundo`
 
-<figure><img src=".gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 **Estructura y archivos creados**
 
-<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 Dentro de lib.rs está el contrato por defecto
 
@@ -46,9 +46,9 @@ Se ejecuta el siguiente comando:\
 
 _stellar contract build_
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption><p>Estructura de archivos generada bajo la carpeta release</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Estructura de archivos generada bajo la carpeta release</p></figcaption></figure>
 
 Podemos ver que se creo una carpeta llamada release, más internamente vemos que está creado el archivo hello\_world.wasm
 
@@ -76,7 +76,7 @@ stellar contract deploy `
 
 Felicidades, ya tienes el contratro deplegado en testnet 🥳
 
-<figure><img src=".gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://stellar.expert/explorer/testnet/contract/CDCIWIAOWCDIORMZWV53VY5DVLOGB5PWG4ETSAEKKHX43RZVSPYUSLRS?filter=history" %}
 Link del contrato desplegado en la red testnet de Stellar
@@ -120,4 +120,4 @@ hello `
 
 **El resultado es:**
 
-<figure><img src=".gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>

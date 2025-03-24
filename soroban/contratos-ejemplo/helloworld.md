@@ -10,15 +10,15 @@ Nos vamos a una ruta donde queramos crear nuestro proyecto y ponemos el siguient
 stellar contract init helloworld
 ```
 
-<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption><p>Estructuras de archivos generados</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Estructuras de archivos generados</p></figcaption></figure>
 
 Como podemos observar el proyecto como tal se llama _helloworld_ y en la carpeta contracts se creó una carpeta llamada hello-world, este contrato se genera por defecto cuando creamos un proyecto pero no indicamos como se llama el contrato como tal
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 **Análisis del código generado**
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>archivo lib.rs dentro de la carpeta hello-world</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption><p>archivo lib.rs dentro de la carpeta hello-world</p></figcaption></figure>
 
 1 **Declaración de No-Standard Library**
 
@@ -120,7 +120,7 @@ stellar contract deploy `
   --alias hello_world
 ```
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 **Pruebas del contrato**
 
@@ -150,4 +150,4 @@ hello `
 
 **Obtenemos lo siguiente:**
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>

@@ -21,11 +21,11 @@ stellar keys generate --global developer --network testnet --fund
 
 Para este caso generamos una identidad global llamada developer en la red de testnet.
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Al abrir el archivo generado vemos que es un contenedor de una frase semilla.
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 O  con linea de comando
 
@@ -47,7 +47,7 @@ stellar keys address developer
 
 Obtenemos:
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 **Consultar el saldo**
 
@@ -56,7 +56,7 @@ Hay 2 formas por web o por comandos
 **El modo sencillo, explorador web**\
 ingresamos la dirección en esta dirección [https://stellar.expert/explorer/testnet](https://stellar.expert/explorer/testnet)
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption><p>Acá vemos que la cuenta viene con 10.000 lumens, lo suficiente para seguir con los ejercicios</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Acá vemos que la cuenta viene con 10.000 lumens, lo suficiente para seguir con los ejercicios</p></figcaption></figure>
 
 **Para los amantes de la consola.** 😉
 
@@ -80,7 +80,7 @@ stellar contract invoke --id CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HH
 
 La respuesta es:
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 **Pasar fondos de una billetera a otra**
 
@@ -109,4 +109,4 @@ stellar contract invoke --id CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HH
 
 Obtenemos lo siguiente:
 
-<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
