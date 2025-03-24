@@ -189,5 +189,5 @@ stellar contract deploy *
   --wasm target/wasm32-unknown-unknown/release/ConditionalStatements.wasm *
   --source developer *
   --network testnet *
-  --alias primitivedata
+  --alias ConditionalStatements
 ```
