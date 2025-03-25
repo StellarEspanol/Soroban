@@ -178,7 +178,7 @@ impl SimpleContract {
   * **`#[contract]`**: Define la estructura principal del contrato.
   * **`#[contractimpl]`**: Implementa la lógica de negocio del contrato.
   * **`#[contracttype]`**: Declara tipos (enums o structs) que se utilizarán en la interfaz del contrato.\
-    Para más detalles, consulta la documentación de contratos Soroban.
+    [Para más detalles, consulta la documentación de contratos Soroban.](https://developers.stellar.org/docs/build/smart-contracts/example-contracts/custom-types#how-it-works)
 
 #### 3. **Enum `TaskStatus`**
 
@@ -196,14 +196,14 @@ impl SimpleContract {
   * `status: TaskStatus`: Estado actual de la tarea.
   * `assignee: Address`: Dirección del usuario asignado a la tarea.
 * **`Address`** es un tipo que representa direcciones de cuentas o contratos en Soroban.\
-  Más información en la documentación de Address.
+  [Más información en la documentación de Address.](https://developers.stellar.org/docs/learn/encyclopedia/contract-development/types/built-in-types#address-address)
 
 #### 5. **Tipos del SDK**
 
 * **`Env`**: Proporciona el entorno de ejecución del contrato, permitiendo el acceso a almacenamiento, logging y otras funciones.\
-  Consulta Env en la documentación de Soroban.
+  [Consulta Env en la documentación de Soroban.](https://developers.stellar.org/docs/learn/encyclopedia/contract-development/environment-concepts#values-and-types)
 * **`String`**: Tipo de cadena adaptado a entornos _no\_std_ que se utiliza para manejar textos en el contrato.\
-  Más información en String en Soroban.
+  [Más información en String en Soroban.](https://developers.stellar.org/docs/learn/encyclopedia/contract-development/types/built-in-types#bytes-strings-bytes-bytesn-string)
 
 ***
 
@@ -212,7 +212,7 @@ impl SimpleContract {
 #### 1. **find\_fruit**
 
 ```rust
-rustCopiarEditarpub fn find_fruit(env: Env, fruit: String) -> i32 {
+pub fn find_fruit(env: Env, fruit: String) -> i32 {
     let fruits: [String; 5] = [
         String::from_str(&env,"manzana"),
         String::from_str(&env,"banana"),
@@ -243,7 +243,7 @@ rustCopiarEditarpub fn find_fruit(env: Env, fruit: String) -> i32 {
 #### 2. **create\_task**
 
 ```rust
-rustCopiarEditarpub fn create_task(env: Env, id: u32, description: String, assignee: Address) -> Task {
+pub fn create_task(env: Env, id: u32, description: String, assignee: Address) -> Task {
     Task {
         id,
         description,
@@ -262,7 +262,7 @@ rustCopiarEditarpub fn create_task(env: Env, id: u32, description: String, assig
 #### 3. **get\_info**
 
 ```rust
-rustCopiarEditarpub fn get_info(env: Env) -> (String, i32) {
+pub fn get_info(env: Env) -> (String, i32) {
     (String::from_str(&env,"Ejemplo Simple"), 123)
 }
 ```
@@ -295,8 +295,6 @@ rustCopiarEditarpub fn get_status_description(env: Env, status: TaskStatus) -> S
 
 ***
 
-***
-
 ### 📌 **Resumen General**
 
 Este contrato inteligente demuestra:
@@ -313,8 +311,3 @@ Este contrato inteligente demuestra:
 
 
 \
-
-
-```
-// Some code
-```
