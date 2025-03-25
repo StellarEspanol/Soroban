@@ -76,3 +76,94 @@ rustCopiarEditarfn main() {
     println!("El primer número es: {} ", numeros[0]);
 }
 ```
+
+**Contratos inteligentes ejemplo:**
+
+En esta ocasión vamos a crear un contrato independiente por cada tipo de dato de la siguiente manera.
+
+Abrimos la consola en la ruta donde deseamos crear el proyecto y ejecutamos.
+
+```bash
+stellar contract init structured_data_types --name structured_data_types
+```
+
+&#x20;Borramos todo el código y ponemos lo siguiente:
+
+```rust
+#![no_std]
+use soroban_sdk::{contract, contractimpl, contracttype, Address, Env, String, };
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum TaskStatus {
+    Open = 0,
+    InProgress = 1,
+    Completed = 2,
+}
+
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct Task {
+    pub id: u32,
+    pub description: String,
+    pub status: TaskStatus,
+    pub assignee: Address,
+}
+
+#[contract]
+pub struct SimpleContract;
+#[contractimpl]
+impl SimpleContract {
+    // Función que busca una fruta en un array y devuelve su posición o -1 si no la encuentra.
+    pub fn find_fruit(env: Env,fruit: String) -> i32 {
+        let fruits: [String; 5] = [
+            String::from_str(&env,"manzana"),
+            String::from_str(&env,"banana"),
+            String::from_str(&env,"naranja"),
+            String::from_str(&env,"uva"),
+            String::from_str(&env,"fresa"),
+        ];
+
+        for (index, f) in fruits.iter().enumerate() {
+            if f == &fruit {
+                // Compara la fruta dada con cada elemento del array.
+                return index as i32; // Devuelve la posición (índice) si la encuentra.
+            }
+        }
+
+        -1 // Devuelve -1 si la fruta no está en el array.
+    }
+
+ 
+    // Función que crea una tarea y devuelve el struct
+   pub fn create_task(env: Env, id: u32, description: String, assignee: Address) -> Task {
+        Task {
+            id,
+            description,
+            status: TaskStatus::Open,
+            assignee,
+        }
+    }
+ 
+     // Función que devuelve una tupla con información
+    pub fn get_info(env: Env) -> (String, i32) {
+        (String::from_str(&env,"Ejemplo Simple"), 123)
+    }
+
+    // Función que devuelve la descripción del estado de la tarea
+    pub fn get_status_description(env: Env,status: TaskStatus) -> String {
+        match status {
+            TaskStatus::Open => String::from_str(&env,"Abierta"),
+            TaskStatus::InProgress => String::from_str(&env,"En Progreso"),
+            TaskStatus::Completed => String::from_str(&env,"Completada"),
+        }
+    }
+}
+```
+
+\
+
+
+```
+// Some code
+```
