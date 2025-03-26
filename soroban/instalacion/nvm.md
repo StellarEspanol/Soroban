@@ -10,7 +10,7 @@ Se ingresa a este link para ver las últimas versiones[https://github.com/nvm-sh
 
 Abrimos la termonal y ejecutamos lo siguiente:
 
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 ```
 
