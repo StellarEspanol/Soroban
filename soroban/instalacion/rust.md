@@ -17,7 +17,7 @@ Abre tu aplicación de terminal (Terminal.app en macOS o la terminal de tu distr
 
 #### Paso 2: Descargar e instalar Rust con rustup
 
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
@@ -27,7 +27,7 @@ _Este comando descargará un script y te guiará por el proceso de instalación.
 
 Una vez finalizada la instalación, cierra y vuelve a abrir la terminal o ejecuta:
 
-```
+```bash
 source $HOME/.cargo/env
 ```
 
@@ -37,13 +37,13 @@ Esto garantiza que el directorio de Cargo (donde se instalan las herramientas, p
 
 Comprueba que Rust se instaló correctamente ejecutando:
 
-```
+```bash
 rustc --version
 ```
 
 #### Paso 5: Agregamos el siguiente paquete
 
-```
+```bash
 rustup target add wasm32-unknown-unknown
 ```
 
@@ -53,27 +53,27 @@ Rust requiere un enlazador para compilar correctamente:
 
 * **En macOS:** Instala las herramientas de línea de comandos de Xcode
 
-```
+```bash
 xcode-select --install
 ```
 
 * **En Linux (por ejemplo, Ubuntu):** Asegúrate de tener instalado el paquete `build-essential`
 
-```
+```bash
 sudo apt-get update
 sudo apt-get install build-essential
 ```
 
 * Fedora
 
-```
+```bash
 sudo dnf update
 sudo dnf install make automake gcc gcc-c++ kernel-devel
 ```
 
 * Arch
 
-```
+```bash
 sudo pacman -Syu
 sudo pacman -S base-devel
 ```
@@ -94,13 +94,13 @@ Ejecuta el archivo descargado y sigue las instrucciones en pantalla. Durante la 
 
 Abre una terminal (CMD o PowerShell) y ejecuta:
 
-```
+```powershell
 rustc --version
 ```
 
 #### Paso 4: Agregamos los siguientes paquetes
 
-```
+```powershell
 rustup toolchain install stable-x86_64-pc-windows-gnu
 rustup default stable-x86_64-pc-windows-gnu
 rustup target add wasm32-unknown-unknown 
