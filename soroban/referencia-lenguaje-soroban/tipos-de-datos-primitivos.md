@@ -8,7 +8,7 @@ description: >-
 
 Nos vamos a una ruta donde queramos crear nuestro proyecto y ponemos el siguiente comando:
 
-```
+```bash
 stellar contract init  primitivedata --name primitivedata
 ```
 
@@ -115,7 +115,7 @@ Este contrato define funciones matemáticas y lógicas en Soroban:
 
 Ejecutamos lo siguiente:
 
-```
+```bash
 Stellar contract build
 ```
 
