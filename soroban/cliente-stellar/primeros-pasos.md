@@ -15,13 +15,13 @@ La identidad es un alias , que nos sirve para manejar la cuenta generada de una 
 
 Para este caso por ejemplo vamos a generar una identidad llamada _developer_ , ya dejemos descansar a Bob y Alice 😅
 
-```
+```bash
 stellar keys generate --global developer --network testnet --fund
 ```
 
 Para este caso generamos una identidad global llamada developer en la red de testnet.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Ejecucuón de prueba</p></figcaption></figure>
 
 Al abrir el archivo generado vemos que es un contenedor de una frase semilla.
 
@@ -29,7 +29,7 @@ Al abrir el archivo generado vemos que es un contenedor de una frase semilla.
 
 O  con linea de comando
 
-```
+```bash
 cat /home/<USUARIO>/.config/stellar/identity/developer.toml
 ```
 
@@ -41,17 +41,17 @@ Más información del comando
 
 Para saber cual es la llave pública de una identidad corremos el siguiente comando:
 
-```
+```bash
 stellar keys address developer
 ```
 
 Obtenemos:
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Consultar el saldo**
 
-Hay 2 formas por web o por comandos
+Hay 2 formas por web o por comando
 
 **El modo sencillo, explorador web**\
 ingresamos la dirección en esta dirección [https://stellar.expert/explorer/testnet](https://stellar.expert/explorer/testnet)
@@ -72,7 +72,7 @@ ingresamos la dirección en esta dirección [https://stellar.expert/explorer/tes
 
 Escribimos lo siguiente:
 
-```
+```bash
 stellar contract invoke --id CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC 
 --network testnet --source-account developer 
 -- balance --id GD45T2VRMYBSGRHLMVTS4QQZVXAM7WD6IYWKYRS7DFURRR2EKWCNGOAN

@@ -12,7 +12,7 @@ Nos dirijimos a [https://nodejs.org/es/download](https://nodejs.org/es/download)
 
 Abrimos la terminal y ejecutamos:
 
-```
+```bash
 nvm install 22.14.0 
 ```
 
