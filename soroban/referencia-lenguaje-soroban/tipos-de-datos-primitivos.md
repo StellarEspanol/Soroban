@@ -128,7 +128,7 @@ Reemplaze el simbolo \* por el respectivo carácter de salto de linea a su siste
 ```bash
 stellar contract deploy *
   --wasm target/wasm32-unknown-unknown/release/primitivedata.wasm *
-  --source developer *
+  --source <Identity> *
   --network testnet *
   --alias primitivedata
 ```
@@ -144,7 +144,7 @@ Para **Linux y Mac** el salto de línea de la instrucción es con el carácter "
 ```bash
 stellar contract invoke *
 --id <CONTRACT_ID> *
---source developer *
+--source <Identity> *
 --network testnet *
 -- *
 add_u32 *
@@ -159,7 +159,7 @@ add_u32 *
 ```bash
 stellar contract invoke *
 --id <CONTRACT_ID> *
---source developer *
+--source <identity> *
 --network testnet *
 -- *
 negate_bool *
