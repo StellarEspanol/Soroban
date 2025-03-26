@@ -293,6 +293,24 @@ rustCopiarEditarpub fn get_status_description(env: Env, status: TaskStatus) -> S
 * **Contexto Teórico del `match`:**\
   En Rust, **`match`** es similar a la instrucción `switch` de otros lenguajes, pero es más poderoso, permitiendo comparar contra patrones y asegurando que todos los casos sean tratados o manejados mediante un caso por defecto. Esto proporciona una forma segura y expresiva de controlar el flujo del programa.
 
+**Despliegue del contrato**
+
+Para Mac y Linux el salto de línea es con el carácter " **\\**" y en Windows con el carácter " **´** "
+
+Reemplaze el simbolo \* por el respectivo carácter de salto de linea a su sistema operativo.
+
+```
+stellar contract deploy *
+  --wasm target/wasm32-unknown-unknown/release/structured_data_types.wasm *
+  --source developer *
+  --network testnet *
+  --alias structured_data_types
+```
+
+**Pruebas del contrato**
+
+Para **Linux y Mac** el salto de línea de la instrucción es con el carácter " \ " para **Windows** con el carácter " \` "
+
 ***
 
 ### 📌 **Resumen General**
