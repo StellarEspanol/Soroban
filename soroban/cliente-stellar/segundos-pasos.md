@@ -44,7 +44,11 @@ mod test;
 Se ejecuta el siguiente comando:\
 
 
-_stellar contract build_
+
+
+```
+stellar contract build
+```
 
 <figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
@@ -54,19 +58,24 @@ Podemos ver que se creo una carpeta llamada release, más internamente vemos que
 
 💡el nombre del archivos en web assembly es el que automáticamente se pone dentro del archivo Cargo.toml
 
-**Despliegue del contrato**\
-**Mac/linux**\
-stellar contract deploy \\\
-\--wasm target/wasm32-unknown-unknown/release/hello\_world.wasm \\\
-\--source developer \\\
-\--network testnet \\\
-\--alias hello\_world
+**Despliegue del contrato**
+
+\
+**Mac/linux**
+
+```
+stellar contract deploy \
+--wasm /<RUTA_DE_LA_CARPETA>/target/wasm32-unknown-unknown/release/hello_world.wasm \
+--source developer \
+--network testnet \
+--alias hello_world
+```
 
 **Windows**
 
 ```
 stellar contract deploy `
---wasm target/wasm32-unknown-unknown/release/hello_world.wasm `
+--wasm /<RUTA_DE_LA_CARPETA>/target/wasm32-unknown-unknown/release/hello_world.wasm `
 --source developer `
 --network testnet `
 --alias hello_world
