@@ -125,7 +125,7 @@ Para Mac y Linux el salto de línea es con el carácter " **\\**" y en Windows c
 
 Reemplaze el simbolo \* por el respectivo carácter de salto de linea a su sistema operativo.
 
-```
+```bash
 stellar contract deploy *
   --wasm target/wasm32-unknown-unknown/release/primitivedata.wasm *
   --source developer *
@@ -141,9 +141,9 @@ Para **Linux y Mac** el salto de línea de la instrucción es con el carácter "
 
 **Función add\_u32**
 
-```
+```bash
 stellar contract invoke *
---id CCBJB6CU7VTVAO4OCYZJ75XPQMJ4AC2CBML3H2PXL2WQ55TGADD7PHPL *
+--id <CONTRACT_ID> *
 --source developer *
 --network testnet *
 -- *
@@ -156,9 +156,9 @@ add_u32 *
 
 **Función negate\_bool**
 
-```
+```bash
 stellar contract invoke *
---id CCBJB6CU7VTVAO4OCYZJ75XPQMJ4AC2CBML3H2PXL2WQ55TGADD7PHPL *
+--id <CONTRACT_ID> *
 --source developer *
 --network testnet *
 -- *
