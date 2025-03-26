@@ -311,6 +311,18 @@ stellar contract deploy *
 
 Para **Linux y Mac** el salto de línea de la instrucción es con el carácter " \ " para **Windows** con el carácter " \` "
 
+**función&#x20;**_**find\_fruit**_
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source alice *
+--network testnet *
+-- find_fruit "manzana"
+```
+
+
+
 ***
 
 ### 📌 **Resumen General**
