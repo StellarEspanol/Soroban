@@ -355,3 +355,32 @@ stellar contract invoke *
 --description "Tarea de ejemplo" *
 --assignee <Stellar address>"
 ```
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Ejecución de ejemplo</p></figcaption></figure>
+
+**Función&#x20;**_**get\_info**_
+
+```bash
+stellar contract invoke `
+  --id <CONTRACT_ID> *
+  --source <identity> `
+  --network testnet `
+  -- `
+  get_info
+```
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+Función _get\_status\_description_
+
+```bash
+stellar contract invoke `
+  --id <CONTRACT_ID> `
+  --source <identity> `
+  --network testnet `
+  --  `
+get_status_description  `
+--status 0
+```
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
