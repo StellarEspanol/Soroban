@@ -39,6 +39,60 @@ fn main() {
 }
 ```
 
+**Contratos inteligentes ejemplo:**
+
+En esta ocasión vamos a crear un contrato independiente por cada tipo de dato de la siguiente manera.
+
+Abrimos la consola en la ruta donde deseamos crear el proyecto y ejecutamos.
+
+```bash
+stellar contract init option --name option
+```
+
+&#x20;Borramos todo el código y ponemos lo siguiente:
+
+```rust
+#![no_std]
+use soroban_sdk::{contract, contractimpl, symbol_short, Env, String, Symbol};
+
+#[contract]
+pub struct OptionContract;
+#[contractimpl]
+impl OptionContract {
+    // Establece (o elimina) un mensaje en el almacenamiento del contrato.
+    // Si se pasa Some(mensaje), se guarda. Si se pasa None, se borra.
+    pub fn set_message(env: Env, message: Option<String>) {
+        const key: Symbol = symbol_short!("msg");
+
+        match message {
+            Some(msg) => {
+                // Guardamos el mensaje en el storage
+                env.storage().instance().set(&key, &msg)
+            }
+            None => {
+                // Si se pasa None, eliminamos el mensaje del storage
+                env.storage().instance().remove(&key)
+            }
+        }
+    }
+    // Recupera el mensaje almacenado (si existe) del storage.
+    // Devuelve Some(mensaje) si hay un mensaje, o None si no hay ninguno.
+    pub fn get_message(env: Env) -> Option<String> {
+        let key: Symbol = symbol_short!("msg");
+        env.storage().instance().get(&key)
+    }
+
+    // Método de saludo que usa un parámetro opcional.
+    // Si se proporciona un nombre, saluda a esa persona; si no, saluda a "amigo".
+    pub fn greet(env: Env, name: Option<String>) -> String {
+        match name {
+            Some(n) => n,
+            None => String::from_str(&env, "¡Hola, amigo! 😃"),
+        }
+    }
+}
+```
+
 ## Explicación del contrato
 
 \
@@ -138,3 +192,65 @@ Este contrato inteligente demuestra cómo utilizar el tipo `Option` para gestion
 * **Establecer o eliminar datos en el storage** mediante la función `set_message`.
 * **Recuperar datos del storage** con `get_message`, retornando un valor opcional.
 * **Generar respuestas predeterminadas** en caso de ausencia de valor mediante la función `greet`.
+
+**Despliegue del contrato**
+
+Para Mac y Linux el salto de línea es con el carácter " **\\**" y en Windows con el carácter " **´** "
+
+Reemplaze el simbolo \* por el respectivo carácter de salto de linea a su sistema operativo.
+
+```bash
+stellar contract deploy *
+  --wasm target/wasm32-unknown-unknown/release/option.wasm *
+  --source <Identity> *
+  --network testnet *
+  --alias option
+```
+
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Pruebas del contrato**
+
+Para **Linux y Mac** el salto de línea de la instrucción es con el carácter " \ " para **Windows** con el carácter " \` "
+
+**Función set\_message:**
+
+```bash
+stellar contract invoke *                                                                          
+--id <ID_CONTRACT> *
+--source developer *
+--network testnet *
+-- *
+set_message *
+--message "Hola mundo 🙂"
+```
+
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función get\_message:**
+
+```bash
+stellar contract invoke *                                                                          
+--id <ID_CONTRACT> *
+--source developer *
+--network testnet *
+-- *
+get_message
+```
+
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función get\_message:**
+
+```bash
+stellar contract invoke *                                                                          
+--id <ID_CONTRACT> *
+--source developer *
+--network testnet *
+-- *
+greet
+```
+
+Vamos a hacer que se ejecute el código por la opción none
+
+<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Prueba de ejecución</p></figcaption></figure>
