@@ -20,6 +20,7 @@
 * [Referencia lenguaje Soroban](soroban/referencia-lenguaje-soroban/README.md)
   * [Tipos de datos primitivos](soroban/referencia-lenguaje-soroban/tipos-de-datos-primitivos.md)
   * [Tipos de Datos Estructurados](soroban/referencia-lenguaje-soroban/tipos-de-datos-estructurados.md)
+  * [Option](soroban/referencia-lenguaje-soroban/option.md)
   * [Colecciones](soroban/referencia-lenguaje-soroban/colecciones.md)
   * [String](soroban/referencia-lenguaje-soroban/string.md)
   * [Sentencias condicionales](soroban/referencia-lenguaje-soroban/sentencias-condicionales.md)
