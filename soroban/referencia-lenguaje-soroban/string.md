@@ -143,7 +143,19 @@ Si llamamos `concatenate("Hola", "Mundo")`, devuelve `["Hola", "Mundo"]`.
 🔹 **Nota:**\
 Soroban aún **no** soporta concatenación directa con `+`, por lo que se usa un vector para unir los valores.
 
-***
+### 📌 **Resumen**
+
+Este contrato proporciona funciones útiles para manipular strings en Soroban:
+
+* `create_string()`: Retorna el string recibido.
+* `get_length()`: Retorna la longitud del string.
+* `compare_strings()`: Compara si dos strings son iguales.
+* `is_empty()`: Verifica si un string está vacío.
+* `concatenate()`: Une dos strings en un vector (ya que la concatenación directa no está disponible en Soroban).
+
+Este contrato permite manejar textos dentro de la blockchain de manera eficiente. 🚀
+
+
 
 **Compilación del contrato**
 
@@ -164,17 +176,54 @@ stellar contract deploy *
   --wasm target/wasm32-unknown-unknown/release/strings.wasm *
   --source developer *
   --network testnet *
-  --alias primitivedata
+  --alias strings
 ```
 
-### 📌 **Resumen**
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
-Este contrato proporciona funciones útiles para manipular strings en Soroban:
+**Pruebas del contrato**
 
-* `create_string()`: Retorna el string recibido.
-* `get_length()`: Retorna la longitud del string.
-* `compare_strings()`: Compara si dos strings son iguales.
-* `is_empty()`: Verifica si un string está vacío.
-* `concatenate()`: Une dos strings en un vector (ya que la concatenación directa no está disponible en Soroban).
+Para **Linux y Mac** el salto de línea de la instrucción es con el carácter " \ " para **Windows** con el carácter " \` "
 
-Este contrato permite manejar textos dentro de la blockchain de manera eficiente. 🚀
+**Función`create_string`**
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+create_string *
+--text "Hello Soroban"
+```
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función** get\_length
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+get_length *
+--text "Hello Soroban"
+```
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función `compare_strings`**
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+compare_strings *
+--text1 "Hello Soroban" *
+--text2 "Hello Stellar" *
+```
+
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>ejecución de prueba</p></figcaption></figure>

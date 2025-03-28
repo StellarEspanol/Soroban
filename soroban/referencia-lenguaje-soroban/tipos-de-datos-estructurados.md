@@ -369,7 +369,7 @@ stellar contract invoke `
   get_info
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 Función _get\_status\_description_
 
@@ -383,4 +383,4 @@ get_status_description  `
 --status 0
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>

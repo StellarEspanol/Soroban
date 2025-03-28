@@ -402,7 +402,7 @@ stellar contract deploy *
   --alias option
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Pruebas del contrato**
 
@@ -420,7 +420,7 @@ add_vec *
 --value "Hello 🌎"
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Función get\_vec\_element:**
 
@@ -434,7 +434,7 @@ get_vec_element *
 --index 0
 ```
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Función remove\_vec\_element:**
 
@@ -448,7 +448,7 @@ remove_vec_element *
 --index 0
 ```
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Función add\_map\_entry:**
 
@@ -463,7 +463,7 @@ add_map_entry *
 --value "hola que más?"
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Función get\_map\_value:**
 
@@ -478,3 +478,17 @@ get_map_value *
 ```
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función remove\_map\_entry:**
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+remove_map_entry *
+--key "key1"
+```
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
