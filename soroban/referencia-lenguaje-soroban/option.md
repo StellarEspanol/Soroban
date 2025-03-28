@@ -41,8 +41,6 @@ fn main() {
 
 **Contratos inteligentes ejemplo:**
 
-En esta ocasión vamos a crear un contrato independiente por cada tipo de dato de la siguiente manera.
-
 Abrimos la consola en la ruta donde deseamos crear el proyecto y ejecutamos.
 
 ```bash
@@ -251,6 +249,6 @@ stellar contract invoke *
 greet
 ```
 
-Vamos a hacer que se ejecute el código por la opción none
+_Vamos a hacer que se ejecute el código por la opción none_
 
 <figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Prueba de ejecución</p></figcaption></figure>
