@@ -144,7 +144,7 @@ stellar contract deploy *
   
 ```
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Pruebas del contratro**
 
@@ -162,7 +162,7 @@ stellar contract invoke *
   --increment 200
 ```
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Invocación de la función inc\_counter**
 
@@ -175,7 +175,7 @@ stellar contract invoke *
     inc_counter
 ```
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Invocación de la función get\_counter**
 

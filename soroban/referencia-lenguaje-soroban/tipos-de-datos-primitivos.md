@@ -133,7 +133,7 @@ stellar contract deploy *
   --alias primitivedata
 ```
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Pruebas del contrato**
 
@@ -152,7 +152,7 @@ add_u32 *
 --b 123
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
 **Función negate\_bool**
 
@@ -166,4 +166,4 @@ negate_bool *
 --flag true
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
