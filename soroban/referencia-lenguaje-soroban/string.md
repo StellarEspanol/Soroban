@@ -213,7 +213,7 @@ get_length *
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
 
-**Función `compare_strings`**
+**Función** `compare_strings`
 
 ```bash
 stellar contract invoke *
@@ -227,3 +227,32 @@ compare_strings *
 ```
 
 <figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption><p>ejecución de prueba</p></figcaption></figure>
+
+**Función `is_empty`**
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+is_empty *
+--text1 "Algún texto" 
+```
+
+<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Ejecución de prueba</p></figcaption></figure>
+
+**Función `concatenate`**
+
+```bash
+stellar contract invoke *
+--id <CONTRACT_ID> *
+--source <Identity> *
+--network testnet *
+-- *
+concatenate *
+--text1 "Algún texto" *
+--text2 "Algún otro texto" 
+```
+
+<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Ejecuciónd e prueba</p></figcaption></figure>
